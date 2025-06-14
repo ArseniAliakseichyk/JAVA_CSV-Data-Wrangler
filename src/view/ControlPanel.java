@@ -329,6 +329,11 @@ public class ControlPanel extends JPanel {
      * @param e zdarzenie akcji
      */
     private void saveAction(ActionEvent e) {
+        MainFrame mainFrame = (MainFrame) SwingUtilities.getWindowAncestor(this);
+        if (mainFrame != null) {
+            mainFrame.getTablePanel().stopEditing();
+        }
+
         JFileChooser fc = new JFileChooser(lastUsedDirectory);
         fc.setFileFilter(new FileNameExtensionFilter("Pliki CSV", "csv"));
         int o = fc.showSaveDialog(this);

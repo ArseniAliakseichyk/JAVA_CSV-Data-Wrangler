@@ -3,6 +3,7 @@ package view;
 import controller.CSVController;
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableCellEditor;
 import javax.swing.table.TableColumn;
 import java.awt.*;
 import java.util.ArrayList;
@@ -42,6 +43,15 @@ public class TablePanel extends JPanel {
         initTable();
         JScrollPane scroll = new JScrollPane(table);
         add(scroll, BorderLayout.CENTER);
+    }
+
+    public void stopEditing() {
+        if (table.isEditing()) {
+            TableCellEditor editor = table.getCellEditor();
+            if (editor != null) {
+                editor.stopCellEditing();
+            }
+        }
     }
 
     /**
