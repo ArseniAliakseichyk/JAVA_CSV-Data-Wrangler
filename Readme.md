@@ -16,7 +16,7 @@
 ## Installation
 
 1. Ensure you have **Java 17 or higher** installed on your system.
-2. Download the `CSV.jar` file from the [releases](https://github.com/ArseniAliakseichyk/JAVA_CSV-Data-Wrangler/releases/tag/v1.0.0) page.
+2. Download the `CSV.jar` file from the [releases](https://github.com/ArseniAliakseichyk/JAVA_CSV-Data-Wrangler/releases/tag/v1.0) page.
 3. Run the application using the following command:
    ```bash
    java -jar CSV.jar
