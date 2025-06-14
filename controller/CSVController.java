@@ -110,6 +110,11 @@ public class CSVController {
      * @param includeHeader określa, czy zapisać nagłówki
      */
     public void saveCSV(File file, String delimiter, boolean includeHeader) {
+        if (tablePanel != null) {
+            tablePanel.stopEditing();
+        }
+
+        updateStatus();
         try {
             CSVUtils.writeCSV(file, model.getAllDataForSaving(includeHeader), delimiter);
         } catch (Exception e) {
